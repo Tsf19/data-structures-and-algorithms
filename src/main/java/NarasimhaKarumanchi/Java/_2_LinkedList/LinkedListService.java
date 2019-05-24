@@ -9,6 +9,8 @@ package NarasimhaKarumanchi.Java._2_LinkedList;
  */
 public interface LinkedListService {
 
+	ListNode getHead();
+	
 	int getLengthOfLinkedList();
 	
 	void insertAtEnd(int data);
@@ -17,17 +19,16 @@ public interface LinkedListService {
 
 	void insertAtPosition(int data, int position);
 	
-	void removeFromEnd(int data);
+	void removeFromEnd();
 	
-	void removeFromBegining(int data);
+	void removeFromBegining();
 
-	void removeFromPosition(int data, int position);
+	void removeFromPosition(int position);
 	
 	void getNodeAtPosition(int data);
 	
-	void getPositionOfNode(int data);
+	void getFrquencyOfNode(int data);
 	
 	void displayLinkedList();
-
 
 }
