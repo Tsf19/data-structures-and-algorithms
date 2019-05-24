@@ -17,6 +17,7 @@ public class LinkedListServiceImplementatio implements LinkedListService {
 
 	@Override
 	public int getLengthOfLinkedList() {
+		System.out.println("Length Of LinkedList is "+length);
 		return length;
 	}
 
