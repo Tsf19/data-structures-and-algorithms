@@ -1,5 +1,9 @@
 package NarasimhaKarumanchi.Java._3_Stacks._2_DynamicArrayStack;
 
+/**
+ * @author DOMAIN\md.tousif
+ *
+ */
 public class StackServiceImplementation implements StackService {
 
 	//Length of the array used to implement the stack.
@@ -7,7 +11,7 @@ public class StackServiceImplementation implements StackService {
 	
 	//Default array capacity.
 	public static final int CAPACITY = 16; //power of 2
-	public static final int MINCAPACITY = 1<<15; //power of 2
+	public static final int MINCAPACITY = 1<<2; //power of 2
 	
 	//Array used to implement the stack.
 	protected int[] stackRep;
@@ -62,25 +66,31 @@ public class StackServiceImplementation implements StackService {
 	}
 	
 	//shrink to 1/2 if more than 3/4 empty
+//	private void shrink() {
+//		int length = top + 1;
+//		if(length<=MINCAPACITY || top<<2 >= length)
+//			return;
+//		length = length + (top<<1); //shrink to at 1/2 or less of the heap
+//		if(top < MINCAPACITY)
+//			length = MINCAPACITY;
+//		int[] newStack = new int[length];
+//		System.arraycopy(stackRep, 0, newStack, 0, top+1);
+//		stackRep = newStack;
+//		this.capacity = length;
+//	}
+
+	
 	private void shrink() {
-		int length = top + 1;
-		if(length<=MINCAPACITY || top<<2 >= length)
-			return;
-		length = length + (top<<1); //shrink to at 1/2 or less of the heap
-		if(top < MINCAPACITY)
-			length = MINCAPACITY;
-		int[] newStack = new int[length];
+		capacity = (capacity>>2)*3; //shrinking 3/4th
+		int[] newStack = new int[capacity];
 		System.arraycopy(stackRep, 0, newStack, 0, top+1);
 		stackRep = newStack;
-		this.capacity = length;
 	}
-	
 	
 	@Override
 	public void push(int data) throws Exception {
 		if(size() == capacity)
-			throw new Exception("STACK IS FULL");
-		expand();
+			expand();
 		stackRep[++top] = data;
 	}
 	
@@ -91,7 +101,8 @@ public class StackServiceImplementation implements StackService {
 			throw new Exception("STACK IS EMPTY");
 		data = stackRep[top];
 		stackRep[top--] = Integer.MIN_VALUE;
-		shrink();
+		if(size() >= MINCAPACITY && size() <= (capacity>>2)*3)
+			shrink();
 		return data;
 	}
 	

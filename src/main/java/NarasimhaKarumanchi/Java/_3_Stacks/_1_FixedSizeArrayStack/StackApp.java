@@ -2,6 +2,7 @@ package NarasimhaKarumanchi.Java._3_Stacks._1_FixedSizeArrayStack;
 
 public class StackApp {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws Exception {
 
 		int capacity = 7;

@@ -1,5 +1,9 @@
 package NarasimhaKarumanchi.Java._3_Stacks._2_DynamicArrayStack;
 
+/**
+ * @author DOMAIN\md.tousif
+ *
+ */
 public class StackApp {
 
 	@SuppressWarnings("unused")
@@ -41,7 +45,28 @@ public class StackApp {
 		stack.push(7);
 		stack.push(8);
 		stack.push(9);
-//		stack.push(10);
+		stack.push(10);
+		stack.push(11);
+		stack.push(12);
+		stack.push(13);
+		stack.push(14);
+		stack.push(15);
+		
+		
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
+		pop = stack.pop();
 		
 	}
 
