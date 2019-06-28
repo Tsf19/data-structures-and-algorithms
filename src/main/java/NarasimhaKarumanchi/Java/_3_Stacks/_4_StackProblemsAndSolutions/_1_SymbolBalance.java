@@ -1,6 +1,6 @@
 package NarasimhaKarumanchi.Java._3_Stacks._4_StackProblemsAndSolutions;
 
-public class SymbolBalance {
+public class _1_SymbolBalance {
 
 	@SuppressWarnings("unused")
 	public boolean isValidSymbolPattern(String pattern) throws Exception {
@@ -48,7 +48,7 @@ public class SymbolBalance {
 	}
 
 	public static void main(String[] args) throws Exception {
-		SymbolBalance balance = new SymbolBalance();
+		_1_SymbolBalance balance = new _1_SymbolBalance();
 		boolean balanced = balance.isValidSymbolPattern("(([{(([]))[]}]))");
 		System.out.println(balanced);
 	}
