@@ -67,7 +67,8 @@ public class _2_InfixToPostfix {
 
 	public static void main(String[] args) throws Exception {
 
-		String exp = "a+b*(c^d-e)^(f+g*h)-i";
+//		String exp = "a+b*(c^d-e)^(f+g*h)-i";
+		String exp = "a+b*c*d";
 		System.out.println(infixToPostfix(exp)); 
 
 	}
