@@ -10,7 +10,9 @@ public class _5_PalindromeUsingStack {
 		for(i=0; i<string.length()/2; i++) {
 			stack.push(string.charAt(i));
 		}
-		i++;
+		
+		if(string.length()%2!=0)
+			i++;
 		
 		while(i<string.length()) {
 			if(stack.isEmpty()) return false;
@@ -23,7 +25,7 @@ public class _5_PalindromeUsingStack {
 	
 	public static void main(String[] args) throws Exception {
 
-		System.out.println(isPalindrome("1234321"));
+		System.out.println(isPalindrome("1123443211"));
 		
 	}
 }
