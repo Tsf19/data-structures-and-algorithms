@@ -30,6 +30,7 @@ public class _6_StackReversalUsingRecursion {
 		stack.push('B');
 		stack.push('C');
 		stack.push('D');
+		stack.push('E');
 		System.out.println(stack.toString());
 		reverseStack();
 		System.out.println(stack.toString());
