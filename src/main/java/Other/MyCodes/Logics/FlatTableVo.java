@@ -1,6 +1,10 @@
 package Other.MyCodes.Logics;
 
-public class FlatTable {
+/**
+ * @author DOMAIN\md.tousif
+ *
+ */
+public class FlatTableVo {
 	
 	private Integer id;
 	private String name;
@@ -8,11 +12,11 @@ public class FlatTable {
 	private Integer level;
 	private Boolean isLowest;
 
-	public FlatTable() {
+	public FlatTableVo() {
 		super();
 	}
 
-	public FlatTable(Integer id, Integer parentId, Boolean isLowest) {
+	public FlatTableVo(Integer id, Integer parentId, Boolean isLowest) {
 		super();
 		this.id = id;
 		this.parentId = parentId;
