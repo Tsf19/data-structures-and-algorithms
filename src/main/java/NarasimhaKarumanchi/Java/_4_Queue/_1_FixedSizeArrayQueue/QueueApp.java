@@ -1,5 +1,9 @@
 package NarasimhaKarumanchi.Java._4_Queue._1_FixedSizeArrayQueue;
 
+/**
+ * @author DOMAIN\md.tousif
+ *
+ */
 public class QueueApp {
 
 	public static void main(String[] args) {

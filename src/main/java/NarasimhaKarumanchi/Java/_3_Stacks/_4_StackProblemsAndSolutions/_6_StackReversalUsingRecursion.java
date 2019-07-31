@@ -1,5 +1,9 @@
 package NarasimhaKarumanchi.Java._3_Stacks._4_StackProblemsAndSolutions;
 
+/**
+ * @author DOMAIN\md.tousif
+ *
+ */
 public class _6_StackReversalUsingRecursion {
 
 	static StackService<Character> stack = new StackServiceImplementation<>();

@@ -1,5 +1,9 @@
 package NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal;
 
+/**
+ * @author DOMAIN\md.tousif
+ *
+ */
 public class BinaryTreeNode {
 
 	public int data;

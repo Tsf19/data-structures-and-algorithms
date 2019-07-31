@@ -1,5 +1,10 @@
 package NarasimhaKarumanchi.Java._3_Stacks._4_StackProblemsAndSolutions;
 
+/**
+ * @author DOMAIN\md.tousif
+ *
+ * @param <T>
+ */
 public interface StackService <T> {
 
 	int size();
