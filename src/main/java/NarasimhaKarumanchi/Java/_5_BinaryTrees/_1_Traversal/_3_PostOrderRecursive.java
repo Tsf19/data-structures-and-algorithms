@@ -1,12 +1,12 @@
 package NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal;
 
-public class _1_PreOrderRecursive {
+public class _3_PostOrderRecursive {
 
 	public static void preOrder(BinaryTreeNode root) {
 		if(root != null) {
-			System.out.println(root.data);
 			preOrder(root.left);
 			preOrder(root.right);
+			System.out.println(root.data);
 		}
 	}
 	
