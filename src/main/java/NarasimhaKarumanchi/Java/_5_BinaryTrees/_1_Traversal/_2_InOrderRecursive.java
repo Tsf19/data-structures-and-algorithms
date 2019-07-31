@@ -1,12 +1,16 @@
 package NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal;
 
+/**
+ * @author DOMAIN\md.tousif
+ *
+ */
 public class _2_InOrderRecursive {
 
-	public static void preOrder(BinaryTreeNode root) {
+	public static void inOrder(BinaryTreeNode root) {
 		if(root != null) {
-			preOrder(root.left);
+			inOrder(root.left);
 			System.out.println(root.data);
-			preOrder(root.right);
+			inOrder(root.right);
 		}
 	}
 	
@@ -33,6 +37,6 @@ public class _2_InOrderRecursive {
 		binaryTree.right.left.left = new BinaryTreeNode(60);
 		binaryTree.right.left.right = new BinaryTreeNode(72);
 		
-		preOrder(binaryTree);
+		inOrder(binaryTree);
 	}
 }

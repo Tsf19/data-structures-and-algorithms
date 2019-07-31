@@ -17,4 +17,6 @@ public interface StackService<T> {
 
 	T pop();
 
+	T peek();
+
 }

@@ -6,36 +6,39 @@ import java.util.List;
 
 /**
  * @author DOMAIN\md.tousif
- *
- * In the recursive version, a stack is required as we need to remember the current node so that after
- * completing the left subtree we can go to the right subtree. To simulate the same, first we process
- * the current node and before going to the left subtree, we store the current node on stack. After
- * completing the left subtree processing, pop the element and go to its right subtree. Continue this
- * process until stack is nonempty.
+ * This is similar to pre-order, only change is, instead of processing the node before going to left sub-tree,
+ * process it after popping.(which is indicated after completion of left subtree processing).
  */
 
 
-public class _4_PreOrderIterative {
+public class _5_InOrderIterative {
 
-	public static List<Integer> preOrder(BinaryTreeNode root) {
+	public static List<Integer> inOrder(BinaryTreeNode root) {
 		
 		List<Integer> result = new ArrayList<>();
 		if(root == null)
 			return result;
 
 		StackService<BinaryTreeNode> stack = new StackServiceImplementation<>();
-		stack.push(root);
+		BinaryTreeNode currentNode = root;
+		Boolean done = false;
 		
-		while(!stack.isEmpty()) {
-			BinaryTreeNode temp = stack.pop();
-			result.add(temp.data);
-			//IMPORTANT NOTE : First Push Right, Then Push Left
-			if(temp.right != null)
-				stack.push(temp.right);
-			if(temp.left != null)
-				stack.push(temp.left);
+		while(!done) {
+			
+			if(currentNode != null) {
+				stack.push(currentNode);
+				currentNode = currentNode.left;
+			}
+			else {
+				if(stack.isEmpty())
+					done = true;
+				else {
+					currentNode = stack.pop();
+					result.add(currentNode.data);
+					currentNode = currentNode.right;
+				}
+			}
 		}
-		
 		return result;
 	}
 	
@@ -62,7 +65,7 @@ public class _4_PreOrderIterative {
 		binaryTree.right.left.left = new BinaryTreeNode(60);
 		binaryTree.right.left.right = new BinaryTreeNode(72);
 		
-		List<Integer> result = preOrder(binaryTree);
+		List<Integer> result = inOrder(binaryTree);
 		System.out.println(result.toString());
 	}
 }

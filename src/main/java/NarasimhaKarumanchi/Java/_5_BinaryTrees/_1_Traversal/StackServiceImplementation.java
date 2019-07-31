@@ -64,4 +64,12 @@ public class StackServiceImplementation<T> implements StackService<T> {
 		}
 		return result;
 	}
+
+	@Override
+	public T peek() throws EmptyStackException {
+		if(isEmpty())
+			throw new EmptyStackException();
+		T result = top.getData();
+		return result;
+	}
 }
