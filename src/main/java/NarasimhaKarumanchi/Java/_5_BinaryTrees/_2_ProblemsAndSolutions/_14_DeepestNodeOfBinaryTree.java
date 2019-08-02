@@ -5,39 +5,36 @@ import java.util.Queue;
 
 import NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal.BinaryTreeNode;
 
-public class _12_HeightOfBinaryTreeWithLevelOrder {
+public class _14_DeepestNodeOfBinaryTree {
 
-	public static int maxDepth(BinaryTreeNode root) {
+	public static Integer deepest(BinaryTreeNode root) {
 
-		if((root == null) || (root.left == null && root.right == null))
-			return 0;
+		if(root == null)
+			return null;
 		
-		int maxDepth = 0;
+		if(root.left == null && root.right == null)
+			return root.data;
 		
 		Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
 		queue.offer(root);
-		queue.offer(null);
+		
+		BinaryTreeNode currentNode = null;
 		
 		while(!queue.isEmpty()) {
 			
-			BinaryTreeNode currentNode = queue.poll();
+			currentNode = queue.poll();
 			
 			if(currentNode != null) {
-				
+
 				if(currentNode.left != null)
 					queue.offer(currentNode.left);
 				
 				if(currentNode.right != null)
 					queue.offer(currentNode.right);
 			}
-			else if(!queue.isEmpty()) {
-				maxDepth++;
-				queue.offer(null);
-			}
-			
 		}
 		
-		return maxDepth;
+		return currentNode.data ;
 	}
 	
 	public static void main(String[] args) {
@@ -62,7 +59,7 @@ public class _12_HeightOfBinaryTreeWithLevelOrder {
 		
 		binaryTree.right.left.right.left = new BinaryTreeNode(71);
 	
-		int maxDepth = maxDepth(binaryTree);
-		System.out.println(maxDepth);
+		int deepest = deepest(binaryTree);
+		System.out.println(deepest);
 	}
 }
