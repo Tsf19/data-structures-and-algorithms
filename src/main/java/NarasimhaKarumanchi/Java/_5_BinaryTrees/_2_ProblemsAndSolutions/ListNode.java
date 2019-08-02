@@ -1,10 +1,11 @@
 /**
  * 
  */
-package NarasimhaKarumanchi.Java._3_Stacks._4_StackProblemsAndSolutions;
+package NarasimhaKarumanchi.Java._5_BinaryTrees._2_ProblemsAndSolutions;
 
 /**
  * @author Tousif
+ * @param <T>
  *
  */
 public class ListNode<T>{

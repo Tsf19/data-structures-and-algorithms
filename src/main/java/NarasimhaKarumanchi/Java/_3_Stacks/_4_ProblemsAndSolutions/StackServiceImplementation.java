@@ -1,4 +1,4 @@
-package NarasimhaKarumanchi.Java._3_Stacks._4_StackProblemsAndSolutions;
+package NarasimhaKarumanchi.Java._3_Stacks._4_ProblemsAndSolutions;
 
 import java.util.EmptyStackException;
 
