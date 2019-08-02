@@ -2,7 +2,7 @@ package NarasimhaKarumanchi.Java._5_BinaryTrees._2_ProblemsAndSolutions;
 
 import NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal.BinaryTreeNode;
 
-public class _10_HeightOfBTRecursice {
+public class _10_HeightOfBinaryTreeRecursice {
 
 	public static int maxDepth(BinaryTreeNode root) {
 		
