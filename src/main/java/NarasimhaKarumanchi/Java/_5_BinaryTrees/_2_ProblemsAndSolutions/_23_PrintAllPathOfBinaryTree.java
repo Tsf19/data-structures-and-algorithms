@@ -1,9 +1,5 @@
 package NarasimhaKarumanchi.Java._5_BinaryTrees._2_ProblemsAndSolutions;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-
 import NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal.BinaryTreeNode;
 
 public class _23_PrintAllPathOfBinaryTree {
