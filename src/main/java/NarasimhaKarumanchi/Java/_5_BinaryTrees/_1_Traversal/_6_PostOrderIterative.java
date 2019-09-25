@@ -1,8 +1,8 @@
 package NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author DOMAIN\md.tousif
@@ -33,32 +33,34 @@ public class _6_PostOrderIterative {
 		if(root == null)
 			return result;
 
-		StackService<BinaryTreeNode> stack = new StackServiceImplementation<>();
+		Stack<BinaryTreeNode> stack = new Stack<>();
 		stack.push(root);
 		
 		BinaryTreeNode previousNode = null;
-		Boolean done = false;
 		
 		while(!stack.isEmpty()) {
 			BinaryTreeNode currentNode = stack.peek();
-			
+
 			if(previousNode == null || previousNode.left == currentNode || previousNode.right == currentNode) {
 				//traverse from top to bottom, and if currentNode has left or right child,
 				//push into the stack; otherwise, pop out
-				
+
 				if(currentNode.left != null)
 					stack.push(currentNode.left);
-				else if(currentNode.right != null)
-					stack.push(currentNode.right);
-			
-			}
-			else if(currentNode.left == previousNode) { //means already been in left side
-				if(currentNode.right != null)
-					stack.push(currentNode.right);
+				else
+					if(currentNode.right != null)
+						stack.push(currentNode.right);
+
 			}
 			else {
-				result.add(currentNode.data);
-				stack.pop();
+				if(currentNode.left == previousNode) { //means already been in left side
+					if(currentNode.right != null)
+						stack.push(currentNode.right);
+				}
+				else {
+					result.add(currentNode.data);
+					stack.pop();
+				}
 			}
 			previousNode = currentNode;
 		}
@@ -81,9 +83,6 @@ public class _6_PostOrderIterative {
 		
 		binaryTree.left.right.left = new BinaryTreeNode(30);
 		binaryTree.left.right.right = new BinaryTreeNode(40);
-		
-		binaryTree.right.left = new BinaryTreeNode(70);
-		binaryTree.right.right = new BinaryTreeNode(80);
 		
 		binaryTree.right.left.left = new BinaryTreeNode(60);
 		binaryTree.right.left.right = new BinaryTreeNode(72);

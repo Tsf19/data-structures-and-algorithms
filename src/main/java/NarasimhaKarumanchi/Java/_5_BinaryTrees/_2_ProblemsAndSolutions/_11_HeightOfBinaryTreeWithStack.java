@@ -26,13 +26,14 @@ public class _11_HeightOfBinaryTreeWithStack {
 				else if(current.right != null)
 					stack.push(current.right);
 			}
-			else if(current.left == previous) {
-				if(current.right != null)
-					stack.push(current.right);
-			}
-			else {
-				stack.pop();
-			}
+			else 
+				if(current.left == previous) {
+					if(current.right != null)
+						stack.push(current.right);
+				}
+				else
+					stack.pop();
+			
 			previous = current;
 			
 			if(stack.size()-1 > maxDepth)

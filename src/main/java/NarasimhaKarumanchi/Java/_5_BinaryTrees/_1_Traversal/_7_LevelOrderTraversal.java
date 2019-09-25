@@ -66,9 +66,6 @@ public class _7_LevelOrderTraversal {
 		binaryTree.left.right.left = new BinaryTreeNode(30);
 		binaryTree.left.right.right = new BinaryTreeNode(40);
 		
-		binaryTree.right.left = new BinaryTreeNode(70);
-		binaryTree.right.right = new BinaryTreeNode(80);
-		
 		binaryTree.right.left.left = new BinaryTreeNode(60);
 		binaryTree.right.left.right = new BinaryTreeNode(72);
 		

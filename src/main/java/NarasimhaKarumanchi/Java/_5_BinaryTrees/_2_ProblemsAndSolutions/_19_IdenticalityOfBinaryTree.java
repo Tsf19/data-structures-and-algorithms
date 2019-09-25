@@ -1,8 +1,5 @@
 package NarasimhaKarumanchi.Java._5_BinaryTrees._2_ProblemsAndSolutions;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 import NarasimhaKarumanchi.Java._5_BinaryTrees._1_Traversal.BinaryTreeNode;
 
 public class _19_IdenticalityOfBinaryTree {
@@ -12,7 +9,7 @@ public class _19_IdenticalityOfBinaryTree {
 		if(root1 == null && root2 == null)
 			return true;
 		
-		if(root1== null || root2 == null)
+		if(root1 == null || root2 == null)
 			return false;
 		
 		return identicality(root1.left, root2.left) && identicality(root1.right, root2.right);
