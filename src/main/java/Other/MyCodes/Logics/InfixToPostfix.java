@@ -10,6 +10,10 @@ public class InfixToPostfix {
 		String result = "";
 		String[] expressionArray = expression.split("\\s");
 		
+		if(expressionArray.length == 1) {
+			return expressionArray[0];
+		}
+		
 		Stack<String> stack = new Stack<>();
 		
 		for(String exp : expressionArray) {
@@ -18,17 +22,19 @@ public class InfixToPostfix {
 				stack.push(exp);
 
 			else if(exp.equals(")")) {
-			
+
 				while(!stack.isEmpty() && !stack.peek().equals("(")) {
 					result += " "+stack.pop();
 				}
 				if (!stack.isEmpty() && !stack.peek().equals("(")) 
-                    return "Invalid Expression"; // invalid expression                 
-                else
-                    stack.pop(); 
+					return "Invalid Expression"; // invalid expression
+				else if(stack.isEmpty())
+					return "Invalid Expression"; // invalid expression
+				else
+					stack.pop(); 
 			} 
 			else if(exp.equals("&&") || exp.equals("||")) {
-				while(!!stack.isEmpty()) {
+				while(!stack.isEmpty() && !stack.peek().equals("(")) {
 					result += " "+stack.pop();
 				}
 				stack.push(exp);
@@ -61,7 +67,9 @@ public class InfixToPostfix {
 	public static void main(String[] args) throws Exception {
 
 		String expression = "( ( ( ( F1 ) && ( F2 ) ) || F3 ) || ( ( ( F4 ) || ( F5 ) ) && F6 ) )";
-
+//		String expression = "F1";
+		
+		
 		String postfix = infixToPostfix(expression).trim();
 		System.out.println(postfix);
 		
