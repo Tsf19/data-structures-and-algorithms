@@ -1,5 +1,5 @@
 
-public class Try {
+public class Test {
 	
 	static void test1() {
 		
