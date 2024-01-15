@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.tousif</groupId>
-  <artifactId>DataStructuresAndAlgorithms</artifactId>
+  <artifactId>data-structures-and-algorithms</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>DataStructuresAndAlgorithms</name>
+  <name>data-structures-and-algorithms</name>
   <url>http://maven.apache.org</url>
 
   	<properties>
