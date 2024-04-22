@@ -1,70 +1,9 @@
 package competitiveprogramming.leetcode.string.medium;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
 
-/**
- * https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/
- * 
- * 1347. Minimum Number of Steps to Make Two Strings Anagram
- * 
- * #Medium #String #StringMatching #Counting #HashTable
- * 
- * You are given two strings of the same length s and t. In one step you can choose any character of t and replace it with another character.
- * Return the minimum number of steps to make t an anagram of s.
- *
- * An Anagram of a string is a string that contains the same characters with a different (or the same) ordering.
- *
- * Example 1:
- * Input: s = "bab", t = "aba"
- * Output: 1
- * Explanation: Replace the first 'a' in t with b, t = "bba" which is an anagram of s.
- *
- * Example 2:
- * Input: s = "leetcode", t = "practice"
- * Output: 5
- * Explanation: Replace 'p', 'r', 'a', 'i' and 'c' from t with proper characters to make t an anagram of s.
- *
- * Example 3:
- * Input: s = "anagram", t = "mangaar"
- * Output: 0
- * Explanation: "anagram" and "mangaar" are anagrams.
- * 
- * Constraints:
- * 1 <= s.length <= 5 * 10^4
- * s.length == t.length
- * s and t consist of lowercase English letters only.
- */
-public class LeetCode_1347_MinimumStepsToAnagram {
+public class _1347_MinimumStepsToAnagram_4_LeetCodeSolution_1_ArrayCountExplanation implements _1347_MinimumStepsToAnagram_1_Problem {
 
-    public static void main(String[] args) {
-    	
-    	LeetCode_1347_MinimumStepsToAnagram solution = new LeetCode_1347_MinimumStepsToAnagram();
-
-        // Example usage
-//        System.out.println(solution.minSteps("bab", "aba")); // Output: 1
-//        System.out.println(solution.minSteps("leetcode", "practice")); // Output: 5
-//        System.out.println(solution.minSteps("anagram", "mangaar")); // Output: 0
-
-        /** #################### LeetCode Given Solution Debug Version #################### */
-        System.out.println(solution.minSteps_LeetCodeSolution_DebugVersion("bab", "aba")); // Output: 1
-        System.out.println(solution.minSteps_LeetCodeSolution_DebugVersion("leetcode", "practice")); // Output: 5
-        System.out.println(solution.minSteps_LeetCodeSolution_DebugVersion("anagram", "mangaar")); // Output: 0
-    }
-    
-	/**
-     * @param s The first string.
-     * @param t The second string.
-     * @return The minimum number of steps.
-     */
-    public int minSteps(String s, String t) {
-        // Your solution implementation here
-        return 0; // Placeholder, replace with your actual solution
-    }
-    
-    
     /**
      * #################### INTUITION ####################
      * # Intuition
@@ -181,31 +120,14 @@ public class LeetCode_1347_MinimumStepsToAnagram {
      * Therefore, the total space complexity is constant.
      * 
      */
-    public int minSteps_LeetCodeSolution(String s, String t) {
-    
-    	int[] count = new int[26];
-    	
-    	// Storing the difference of frequencies of characters in t and s.
-    	for (int i = 0; i < s.length(); i++) {
-    		
-    		count[t.charAt(i) - 'a']++;
-    		count[s.charAt(i) - 'a']--;
-    	}
-
-    	int ans = 0;
-    	
-    	// Adding the difference where string t has more instances than s.
-    	// Ignoring where t has fewer instances as they are redundant and
-    	// can be covered by the first case.
-    	for (int i = 0; i < 26; i++) {
-    		ans += Math.max(0, count[i]);
-    	}
-
-    	return ans;
-    }
-    
-    
-	public int minSteps_LeetCodeSolution_DebugVersion(String s, String t) {
+	
+	/**
+     * @param s The first string.
+     * @param t The second string.
+     * @return The minimum number of steps.
+     */
+	@Override
+    public int minSteps(String s, String t) {
 		
 		System.out.println("String s: " + s);
 		System.out.println("String t: " + t);
@@ -269,73 +191,7 @@ public class LeetCode_1347_MinimumStepsToAnagram {
 
         return ans;
 	}
+
     
-
-	
-	
-	/****************************************** LeetCode My Approach 1 - START *****************************************/
-    public int minSteps_MySolution(String s, String t) {
-
-    	if (s.equals(t))
-    		return 0;
-
-    	if (s.length() == 1)
-    		return 1;
-
-    	Map<Character, Integer> charMapCountOfS = new HashMap<>();
-    	Map<Character, Integer> charMapCountOfT = new HashMap<>();
-    	Map<Character, Integer> charMapCountOfST = new HashMap<>();
-
-    	for (char charOfS : s.toCharArray()) {
-
-    		if(!charMapCountOfS.containsKey(charOfS))
-    			charMapCountOfS.put(charOfS, 1);
-    		else
-    			charMapCountOfS.put(charOfS, charMapCountOfS.get(charOfS) + 1);
-
-    		if(!charMapCountOfST.containsKey(charOfS))
-    			charMapCountOfST.put(charOfS, 1);
-    		else
-    			charMapCountOfST.put(charOfS, charMapCountOfST.get(charOfS) + 1);
-
-    	}
-
-
-    	for (char charOfT : t.toCharArray()) {
-
-    		if(!charMapCountOfT.containsKey(charOfT))
-    			charMapCountOfT.put(charOfT, 1);
-    		else
-    			charMapCountOfT.put(charOfT, charMapCountOfT.get(charOfT) + 1);
-
-    		if(!charMapCountOfST.containsKey(charOfT))
-    			charMapCountOfST.put(charOfT, 1);
-    		else
-    			charMapCountOfST.put(charOfT, charMapCountOfST.get(charOfT) + 1);
-
-    	}
-
-    	int minSteps = 0;
-
-    	for (Entry<Character, Integer> entrySetOfST : charMapCountOfST.entrySet()) {
-
-    		Character key = entrySetOfST.getKey();
-
-    		int x = charMapCountOfS.containsKey(key) ? charMapCountOfS.get(key) : 0;
-    		int y = charMapCountOfT.containsKey(key) ? charMapCountOfT.get(key) : 0;
-
-    		int z = x-y;
-
-    		if(z < 0)
-    			z = z * -1;
-
-    		minSteps = minSteps + z;
-    	}
-
-    	return minSteps/2;
-
-    }
-    /****************************************** LeetCode My Approach 1 - END *****************************************/
-
     
 }
