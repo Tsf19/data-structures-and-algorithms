@@ -1,6 +1,6 @@
 package competitiveprogramming.leetcode.string.medium;
 
-public class _1347_MinimumStepsToAnagram_3_LeetCodeSolution_1_ArrayCount implements _1347_MinimumStepsToAnagram_1_Problem {
+public class _1347_MinimumStepsToAnagram_4_LeetCodeSolution_1_ArrayCount implements _1347_MinimumStepsToAnagram_1_Problem {
 
 
 	@Override
