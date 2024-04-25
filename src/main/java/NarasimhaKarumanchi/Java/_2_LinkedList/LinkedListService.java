@@ -23,12 +23,13 @@ public interface LinkedListService {
 	
 	void removeFromBegining();
 
-	void removeFromPosition(int position);
+	void removeFromPosition_V1(int position);
+	
+	void removeFromPosition_V2(int position);
 	
 	void getNodeAtPosition(int data);
 	
 	void getFrquencyOfNode(int data);
 	
 	void displayLinkedList();
-
 }

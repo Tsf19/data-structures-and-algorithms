@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import NarasimhaKarumanchi.Java._2_LinkedList.LinkedListService;
-import NarasimhaKarumanchi.Java._2_LinkedList.LinkedListServiceImplementatio;
+import NarasimhaKarumanchi.Java._2_LinkedList.LinkedListServiceImplementation;
 import NarasimhaKarumanchi.Java._3_Stacks._4_ProblemsAndSolutions.ListNode;
 
 /**

@@ -7,7 +7,7 @@ package NarasimhaKarumanchi.Java._2_LinkedList;
  * @author Tousif
  *
  */
-public class ListNode{
+public class ListNode {
 	
 	private int data;
 	private ListNode next;
@@ -19,6 +19,7 @@ public class ListNode{
 	public void setData(int data) {
 		this.data = data;
 	}
+	
 	public int getData() {
 		return data;
 	}
@@ -26,8 +27,17 @@ public class ListNode{
 	public void setNext(ListNode next) {
 		this.next = next;
 	}
+	
 	public ListNode getNext() {
 		return this.next;
 	}
+
+	@Override
+	public String toString() {
+		return "ListNode [data=" + data + ", next=" + next + "]";
+	}
+
+	
+	
 }
 

@@ -12,8 +12,8 @@ public class LinkedListApp {
 	
 	public static void main(String[] args) {
 
-		LinkedListService list = new LinkedListServiceImplementatio();
-		list.insertAtEnd(10);
+		LinkedListService list = new LinkedListServiceImplementation();
+		list.insertAtEnd(9);
 		list.insertAtEnd(20);
 		list.insertAtEnd(30);
 		list.insertAtEnd(50);
@@ -21,17 +21,23 @@ public class LinkedListApp {
 
 		list.displayLinkedList();
 
+		//0 based indexing
 		list.insertAtPosition(40, 3);
-		
 		list.displayLinkedList();
 		
-		list.insertAtBegining(9);
-		list.insertAtBegining(8);
+		list.insertAtPosition(10, 1);
+		list.displayLinkedList();
+		
+		list.insertAtPosition(8, 0);
+		list.displayLinkedList();
+		
+		list.insertAtBegining(7);
+		list.insertAtBegining(6);
 		
 		list.displayLinkedList();
 
-		list.insertAtPosition(7, 0);
-		list.insertAtBegining(6);
+		list.insertAtPosition(5, 0);
+		list.insertAtBegining(4);
 		
 		list.displayLinkedList();
 		
@@ -44,9 +50,24 @@ public class LinkedListApp {
 		list.displayLinkedList();
 		
 		list.removeFromEnd();
+		list.displayLinkedList();
+
+		list.removeFromPosition_V1(1);
+		list.displayLinkedList();
 		
-		list.removeFromPosition(1);
+		list.removeFromPosition_V1(0);
+		list.displayLinkedList();
 		
+		list.removeFromPosition_V1(6);
+		list.displayLinkedList();
+		
+		list.removeFromPosition_V2(1);
+		list.displayLinkedList();
+		
+		list.removeFromPosition_V2(0);
+		list.displayLinkedList();
+		
+		list.removeFromPosition_V2(4);
 		list.displayLinkedList();
 		
 		System.out.println(list);
