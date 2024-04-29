@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author Tousif
  *
  */
-public class _1_FactorianFunction {
+public class _1_Program_1_Factorial_1 {
 
 	public static int factorial(int number) {
 
