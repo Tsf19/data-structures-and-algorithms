@@ -20,6 +20,12 @@ public class LinkedListServiceImplementation implements LinkedListService {
 		return head;
 	}
 
+	@Override
+	public void setHead(ListNode head) {
+		this.head = head;
+		length = getLengthOfLinkedList();
+	}
+
 	/**
 	 * Time Complexity: O(n), for scanning the list of size n.
 	 * Space Complexity: O(1), for creating a temporary variable.
@@ -115,8 +121,8 @@ public class LinkedListServiceImplementation implements LinkedListService {
 		}
 		
 		// If position is > LengthOfLinkedList , insert newNode at the end of the list
-		if (position >= getLengthOfLinkedList()) {
-			position = getLengthOfLinkedList() - 1;
+		if (position > getLengthOfLinkedList()) {
+			position = getLengthOfLinkedList();
 		}
 		
 		ListNode newNode = new ListNode(data);
@@ -184,6 +190,7 @@ public class LinkedListServiceImplementation implements LinkedListService {
 
 		// If we don't 'previous = null;' we get 'The local variable previous may not have been initialized'
 		previous.setNext(null);
+		
 		
 		length --;
 	}
@@ -291,6 +298,120 @@ public class LinkedListServiceImplementation implements LinkedListService {
 	}
 
 	@Override
+	public ListNode reverseIterative() {
+		
+		/** 
+		 To reverse a Linked List, we need to:
+			1. Initialize three pointers: prev, current, and next
+			2. Start from the head node. Set prev to null, current to head, and next to null
+			3. In each iteration, reverse the link of the current node to point to the prev node instead of the next node
+			4. Move prev, current, and next pointers to the next nodes
+			5. Repeat steps 3-4 until reaching the end of the list
+			6. Update the head pointer to point to the last node (which is now the first node in the reversed list)
+			
+			Time Complexity: O(n)
+			Space Complexity: O(1)
+		 */
+		
+		if (head == null || head.getNext() == null)
+			return head;
+		
+		ListNode current = head, previous = null, next = null;		
+		
+		while (current != null) {
+			next = current.getNext(); // Store the next node
+			current.setNext(previous); // Reverse the link
+			previous = current; // Move previous to current node
+			current = next; // Move current to next node
+		}
+		
+		head = previous; // Update the head to the last node (previous)
+		
+		return head;
+	}
+
+	@Override
+	public ListNode reverseTailRecursive(ListNode current, ListNode previous) {
+
+		/** 
+		 To reverse a Linked List, we need to:
+			1. Initializes the process by calling method with the head node and null as parameters.
+			2. In each recursive call, it takes two parameters:
+			 - current (the current node being processed)
+			 - previous (the previous node in the reversed list)
+			3. At each step, it reverses the link of the current node to point to the previous node instead of the next node.
+			4. Then, it makes a recursive call to process the next node with updated pointers.
+			5. The recursion continues until the current node becomes null, indicating the end of the original list.
+			6. Finally, it returns the previous node, which becomes the new head of the reversed list.
+			
+			Time Complexity: O(n)
+			Space Complexity: O(n)
+		 */
+
+		
+		//If last node, mark it as head
+		if (current == null) {
+			head = previous;
+			return head;
+		}
+		
+		
+		//Save current.next node for recursive call
+		ListNode next = current.getNext();
+
+		//Reverse the link
+		current.setNext(previous);
+		
+		
+		//Now current will be next and current will be previous
+		//reverseTailRecursive(ListNode current, ListNode previous)
+		return reverseTailRecursive(next, current);
+		
+//		return head;
+	}
+
+	
+	@Override
+	public ListNode reverseNonTailRecursive(ListNode current) {
+		
+		/**
+		 * In this function, we recursively visit each element in the linked list until we reach the last one.
+		 * This last element will become the new head of the reversed linked list.
+		 * Also, we append the visited element to the end of the partially reversed linked list
+		 * 		
+		 * The idea is to reach the last node of the linked list using recursion then start reversing the linked list.
+		 * To reverse a Linked List, we need to:
+		 * 1. Divide the list in two parts – first node and rest of the linked list
+		 * 2. Call reverse for the rest of the linked list
+		 * 3. Link the rest linked list to first
+		 * 4. Fix head pointer to NULL
+		 * 
+		 * Time Complexity: O(n)
+		 * Space Complexity: O(n)
+		 * 
+		 */
+
+		if (current == null || current.getNext() == null) {
+			head = current;
+			return current;
+		}
+	
+		//Recursively reverse the remaining list
+		//reverse the rest list and put the first element at the end
+		ListNode rest = reverseNonTailRecursive(current.getNext());
+		
+		//Reverse the direction of the current node
+		current.getNext().setNext(current);
+
+		/* tricky step -- see the diagram */
+		current.setNext(null);
+
+		/* Return the new head of the reversed list */
+		return rest;
+
+	}
+	
+	@Override
 	public void displayLinkedList() {
 		if(head == null) {
 			System.out.print("[" + length + "]: " + "[ ]");
@@ -326,4 +447,5 @@ public class LinkedListServiceImplementation implements LinkedListService {
 			return result + "]";
 		}
 	}
+
 }

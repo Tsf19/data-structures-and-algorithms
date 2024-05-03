@@ -11,6 +11,8 @@ public interface LinkedListService {
 
 	ListNode getHead();
 	
+	void setHead(ListNode head);
+	
 	int getLengthOfLinkedList();
 	
 	void insertAtEnd(int data);
@@ -32,4 +34,11 @@ public interface LinkedListService {
 	void getFrquencyOfNode(int data);
 	
 	void displayLinkedList();
+
+	ListNode reverseIterative();
+
+	ListNode reverseTailRecursive(ListNode current, ListNode previous);
+
+	ListNode reverseNonTailRecursive(ListNode node);
+
 }
