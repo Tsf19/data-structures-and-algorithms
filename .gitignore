@@ -2,20 +2,20 @@
 */.classpath
 *.classpath
 
-#/target/
-#**/target
+/target/
+**/target
 
-#/.classpath
-#**/.classpath
+/.classpath
+**/.classpath
 
-#*.project
-#/.project
+*.project
+/.project
 
 /bin/
 
-#*.settings/
-#/.setting
-#**/.setting
+*.settings/
+/.setting
+**/.setting
 
 # Compiled class file
 *.class
@@ -43,12 +43,12 @@ target/
 
 ### STS ###
 .apt_generated
-#.classpath
-#.factorypath
-#.project
-#.settings
-#.springBeans
-#.sts4-cache
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
 ### IntelliJ IDEA ###
 .idea
