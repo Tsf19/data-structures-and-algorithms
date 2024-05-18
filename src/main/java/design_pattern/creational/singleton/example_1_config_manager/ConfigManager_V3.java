@@ -38,7 +38,7 @@ public class ConfigManager_V3 {
 	private String configData;
 
 	private ConfigManager_V3() {
-		System.out.println("ConfigManager object created once??");
+		System.out.println("ConfigManager object created with hashCode: " + instance.hashCode());
 	}
 	
 	private ConfigManager_V3(String configData) {

@@ -24,11 +24,12 @@ public class ConfigManager_V2 {
 	private String configData;
 
 	private ConfigManager_V2() {
-		System.out.println("ConfigManager object created once??");	
+		System.out.println("ConfigManager object created without configData");
 	}
 	
 	private ConfigManager_V2(String configData) {
 		this.configData = configData;
+		System.out.println("ConfigManager object created with configData: " + configData);
 	}
 
 	public static synchronized ConfigManager_V2 getInstance() {
@@ -36,11 +37,11 @@ public class ConfigManager_V2 {
 		if (instance == null) { // double-checking improves performance by avoiding/skipping synchronization when retrieving already created instance
 			
 			// The inner synchronized with double-checking improves performance
-			synchronized (ConfigManager_V3.class) { //(Concept of Reflection) // This synchronized block synchronizes entire class itself, not a specific variable
+			synchronized (ConfigManager_V2.class) { //(Concept of Reflection) // This synchronized block synchronizes entire class itself, not a specific variable
 				
 				// Check if instance exists, if not create it and assign it to the instance variable
 				if (instance == null) {
-					instance = new ConfigManager_V2();
+					instance = new ConfigManager_V2("initial configs...");
 				}
 			}
 		}
@@ -50,6 +51,11 @@ public class ConfigManager_V2 {
 	
 	public String getConfigData() {
 		return configData;
+	}
+
+	@Override
+	public String toString() {
+		return "ConfigManager_V2 [configData=" + configData + "]";
 	}
 
 	

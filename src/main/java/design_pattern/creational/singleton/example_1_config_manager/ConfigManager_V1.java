@@ -22,13 +22,14 @@ public class ConfigManager_V1 {
 	private ConfigManager_V1() {
 		// Load configuration data
 		// Optional logic for initialization
-		System.out.println("ConfigManager object created once??");
+		System.out.println("ConfigManager object created without configData");
 	}
 	
 	// Private constructor to prevent creating objects from outside the class
 	private ConfigManager_V1(String configData) {
 		// Load configuration data
 		this.configData = configData;
+		System.out.println("ConfigManager object created with configData: " + configData);
 	}
 
 	// Public static method to get the single instance
@@ -38,7 +39,7 @@ public class ConfigManager_V1 {
 
 		// Check if instance exists, if not create it and assign it to the instance variable
 		if (instance == null) {
-			instance = new ConfigManager_V1();
+			instance = new ConfigManager_V1("initial configs...");
 		}
 		
 		return instance;
