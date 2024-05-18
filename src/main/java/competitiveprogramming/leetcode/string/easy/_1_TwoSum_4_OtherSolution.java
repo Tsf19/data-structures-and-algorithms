@@ -1,5 +1,8 @@
 package competitiveprogramming.leetcode.string.easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class _1_TwoSum_4_OtherSolution implements _1_TwoSum_1_Problem {
 
 	/**
@@ -23,8 +26,24 @@ public class _1_TwoSum_4_OtherSolution implements _1_TwoSum_1_Problem {
 	// Using a Hash Table : Time Complexity: O(n) | Space Complexity: O(n)
 	@Override
 	public int[] twoSum(int[] nums, int target) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Map<Integer, Integer> valueMapIndex = new HashMap<Integer, Integer>();
+		
+		for (int i = 0; i < nums.length; i++)
+			valueMapIndex.put(nums[i], i);
+
+		for (int i = 0; i < nums.length; i++) {
+			
+			int complement = target - nums[i];
+			
+//			if(valueMapIndex.get(complement) != null) X
+//			valueMapIndex.get(complement) != i // ignoring same index
+			if (valueMapIndex.containsKey(complement) && valueMapIndex.get(complement) != i)
+				return new int[] {i, valueMapIndex.get(complement)};		
+			
+		}
+
+		return new int[]{}; // No solution found
 	}
 
 
