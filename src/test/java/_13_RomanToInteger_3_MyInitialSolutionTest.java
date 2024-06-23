@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import competitiveprogramming.leetcode.string.easy._13_RomanToInteger_1_Problem;
-import competitiveprogramming.leetcode.string.easy._13_RomanToInteger_3_MyInitialSolution;
+import competitiveprogramming.leetcode.string.easy._00013_RomanToInteger_1_Problem;
+import competitiveprogramming.leetcode.string.easy._00013_RomanToInteger_3_MyInitialSolution;
 
 public class _13_RomanToInteger_3_MyInitialSolutionTest {
 
@@ -25,7 +25,7 @@ public class _13_RomanToInteger_3_MyInitialSolutionTest {
     @Test
     public void testRomanToInt() {
     	
-    	_13_RomanToInteger_1_Problem solution = new _13_RomanToInteger_3_MyInitialSolution();
+    	_00013_RomanToInteger_1_Problem solution = new _00013_RomanToInteger_3_MyInitialSolution();
 
 //        assertAll("numbers",
 //                () -> assertEquals(solution.romanToInt("III"), 3),

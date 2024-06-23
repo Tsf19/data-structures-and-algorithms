@@ -3,7 +3,7 @@ package competitiveprogramming.leetcode.string.easy;
 import java.util.HashMap;
 import java.util.Map;
 
-public class _13_RomanToInteger_3_MyInitialSolution implements _13_RomanToInteger_1_Problem {
+public class _00013_RomanToInteger_3_MyInitialSolution implements _00013_RomanToInteger_1_Problem {
 
 	@Override
 	public int romanToInt(String s) {

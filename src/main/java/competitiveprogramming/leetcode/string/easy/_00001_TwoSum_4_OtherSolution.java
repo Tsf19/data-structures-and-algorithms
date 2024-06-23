@@ -3,7 +3,7 @@ package competitiveprogramming.leetcode.string.easy;
 import java.util.HashMap;
 import java.util.Map;
 
-public class _1_TwoSum_4_OtherSolution implements _1_TwoSum_1_Problem {
+public class _00001_TwoSum_4_OtherSolution implements _00001_TwoSum_1_Problem {
 
 	/**
 	 * A more efficient approach is to use a hash table.

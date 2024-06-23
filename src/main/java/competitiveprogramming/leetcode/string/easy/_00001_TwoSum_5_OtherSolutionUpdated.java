@@ -3,7 +3,7 @@ package competitiveprogramming.leetcode.string.easy;
 import java.util.HashMap;
 import java.util.Map;
 
-public class _1_TwoSum_5_OtherSolutionUpdated implements _1_TwoSum_1_Problem {
+public class _00001_TwoSum_5_OtherSolutionUpdated implements _00001_TwoSum_1_Problem {
 
 	/** One-pass Hash Table */
 	@Override

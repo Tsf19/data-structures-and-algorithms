@@ -22,7 +22,7 @@ package competitiveprogramming.leetcode.string.easy;
  * 	• strs[i] consists of only lowercase English letters.
  * 
  */
-public interface _14_LongestCommonPrefix_1_Problem {
+public interface _00014_LongestCommonPrefix_1_Problem {
 
 	/**
      * @param strs Array of strings.

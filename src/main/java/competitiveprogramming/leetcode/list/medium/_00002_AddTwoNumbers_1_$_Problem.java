@@ -1,4 +1,4 @@
-package competitiveprogramming.leetcode.string.easy;
+package competitiveprogramming.leetcode.list.medium;
 
 import java.util.logging.Logger;
 

@@ -28,7 +28,7 @@ package competitiveprogramming.leetcode.string.easy;
  * 	s does not contain '\"' or '\\'.
  * 
  */
-public interface _917_ReverseOnlyLetters_1_Problem {
+public interface _00917_ReverseOnlyLetters_1_Problem {
 
 	/**
      * @param s The string.

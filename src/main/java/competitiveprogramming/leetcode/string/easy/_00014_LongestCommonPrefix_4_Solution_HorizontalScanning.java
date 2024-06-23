@@ -1,6 +1,6 @@
 package competitiveprogramming.leetcode.string.easy;
 
-public class _14_LongestCommonPrefix_4_Solution_HorizontalScanning implements _14_LongestCommonPrefix_1_Problem {
+public class _00014_LongestCommonPrefix_4_Solution_HorizontalScanning implements _00014_LongestCommonPrefix_1_Problem {
 
 /** Horizontal Scanning : Time Complexity: O(s) | Space Complexity: O(1)
 	Time complexity : O(S), where S is the sum of all characters in all strings */

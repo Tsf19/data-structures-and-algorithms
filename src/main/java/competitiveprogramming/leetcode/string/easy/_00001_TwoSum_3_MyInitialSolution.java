@@ -1,6 +1,6 @@
 package competitiveprogramming.leetcode.string.easy;
 
-public class _1_TwoSum_3_MyInitialSolution implements _1_TwoSum_1_Problem {
+public class _00001_TwoSum_3_MyInitialSolution implements _00001_TwoSum_1_Problem {
 
 	// Brute Force Approach : Time Complexity: O(n^2) | Space Complexity: O(1)
 	@Override

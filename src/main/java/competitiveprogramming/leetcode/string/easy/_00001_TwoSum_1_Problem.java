@@ -30,7 +30,7 @@ package competitiveprogramming.leetcode.string.easy;
  * Only one valid answer exists.
  * 
  */
-public interface _1_TwoSum_1_Problem {
+public interface _00001_TwoSum_1_Problem {
 
 	/**
      * @param nums Array of integers.

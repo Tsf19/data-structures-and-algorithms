@@ -1,8 +1,10 @@
 package competitiveprogramming.leetcode.string.easy;
 
-public class _14_LongestCommonPrefix_5_$_Solution_VerticalScanning implements _14_LongestCommonPrefix_1_Problem {
+public class _00014_LongestCommonPrefix_6_$_Solution_DivideAndConquer implements _00014_LongestCommonPrefix_1_Problem {
 
 	// https://leetcode.com/problems/longest-common-prefix/editorial/
+	
+	
 	
 	@Override
 	public String longestCommonPrefix(String[] strs) {
