@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class _1347_MinimumStepsToAnagram_3_MyInitialSolution_HashMap implements _1347_MinimumStepsToAnagram_1_Problem {
+public class _01347_MinimumStepsToAnagram_3_MyInitialSolution_HashMap implements _01347_MinimumStepsToAnagram_1_Problem {
 
     //My Initial Solution Using HashMap
 	

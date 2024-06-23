@@ -32,7 +32,7 @@ package competitiveprogramming.leetcode.string.medium;
  * s.length == t.length
  * s and t consist of lowercase English letters only.
  */
-public interface _1347_MinimumStepsToAnagram_1_Problem {
+public interface _01347_MinimumStepsToAnagram_1_Problem {
 
 	/**
      * @param s The first string.

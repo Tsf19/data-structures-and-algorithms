@@ -2,7 +2,7 @@ package competitiveprogramming.leetcode.string.medium;
 
 import java.util.Arrays;
 
-public class _1347_MinimumStepsToAnagram_5_LeetCodeSolution_1_ArrayCountExplanation implements _1347_MinimumStepsToAnagram_1_Problem {
+public class _01347_MinimumStepsToAnagram_5_LeetCodeSolution_1_ArrayCountExplanation implements _01347_MinimumStepsToAnagram_1_Problem {
 
     /**
      * #################### INTUITION ####################

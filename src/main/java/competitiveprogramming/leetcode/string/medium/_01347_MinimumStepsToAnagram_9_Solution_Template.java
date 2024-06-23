@@ -1,6 +1,6 @@
 package competitiveprogramming.leetcode.string.medium;
 
-public class _1347_MinimumStepsToAnagram_9_Solution_Template implements _1347_MinimumStepsToAnagram_1_Problem {
+public class _01347_MinimumStepsToAnagram_9_Solution_Template implements _01347_MinimumStepsToAnagram_1_Problem {
 
     
     /**
