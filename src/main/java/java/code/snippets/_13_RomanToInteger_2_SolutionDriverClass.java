@@ -160,3 +160,50 @@
 //    
 //    
 //}
+
+//int _no_prefix_decimal = 45;
+//		System.out.println("_no_prefix_decimal 45 : " + _no_prefix_decimal); // _no_prefix_decimal 45 : 45
+//		System.out.println("45 : " + 45); // 45 : 45
+//		
+//		int _0_prefix_octal = 045;
+//		System.out.println("_0_prefix_octal 045 : " + _0_prefix_octal); // _0_prefix_octal 045 : 37
+//		System.out.println("045 : " + 045); // 045 : 37
+//		
+//		int _0x_prefix_hexadecimal = 0x45;
+//		System.out.println("_0x_prefix_hexadecimal 0x45 : " + _0x_prefix_hexadecimal); // _0x_prefix_hexadecimal 0x45 : 69
+//		System.out.println("0x45 : " + 0x45); // 0x45 : 69
+//		
+//		int _0X_hexadecimal = 0X45;
+//		System.out.println("_0X_hexadecimal 0X45 : " + _0X_hexadecimal); // _0X_hexadecimal 0X45 : 69
+//		System.out.println("0X45 : " + _0X_hexadecimal); // 0X45 : 69
+//		
+//		int _0b_binary = 0b01000101;
+//		System.out.println("_0b_binary 0b01000101 : " + _0b_binary); // _0b_binary 0b01000101 : 69
+//		System.out.println("0b01000101 : " + _0b_binary); // 0b01000101 : 69
+//		
+//		int _0B_binary = 0B01000101;
+//		System.out.println("_0b_binary 0B01000101 : " + _0B_binary); // _0b_binary 0B01000101 : 69
+//		System.out.println("0B01000101 : " + _0B_binary); // 0B01000101 : 69
+
+//		System.out.println("this.getClass().getCanonicalName(): " + this.getClass().getCanonicalName());
+//		System.out.println("this.getClass().getName(): " + this.getClass().getName());
+//		System.out.println("this.getClass().getTypeName(): " + this.getClass().getTypeName());
+//		System.out.println("this.getClass().getSimpleName(): " + this.getClass().getSimpleName());
+
+		/** NOTE:
+		 indexOf():
+		  
+		 Variants:
+		 - int indexOf(int ch) // ch: An int value representing a character (Unicode code point) to search for.
+		 - int indexOf(int ch, int fromIndex)
+		 - int indexOf(String str)
+		 - int indexOf(String str, int fromIndex)
+		 - int indexOf(int ch, int beginIndex, int endIndex)
+		 - int indexOf(String str, int beginIndex, int endIndex)
+		  
+		 indexOf(String str):
+		 Returns the index within this string of the first occurrence of the specified substring. 
+		 The returned index is the smallest value k for which: this.startsWith(str, k)
+		 If no such value of k exists, then -1 is returned.
+		  
+		 Tip: Use the lastIndexOf method to return the position of the last occurrence of specified character(s) in a string. */
