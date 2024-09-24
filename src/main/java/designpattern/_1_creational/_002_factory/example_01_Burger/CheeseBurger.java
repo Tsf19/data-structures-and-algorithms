@@ -1,7 +1,7 @@
 /**
  * 
  */
-package design_pattern.creational.factory.example_1_Burger;
+package designpattern._1_creational._002_factory.example_01_Burger;
 
 /**
  * @author Tousif
