@@ -1,7 +1,7 @@
 /**
  * 
  */
-package design_pattern.creational.singleton.example_1_config_manager;
+package designpattern._1_creational._001_singleton.example_02_config_manager;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
