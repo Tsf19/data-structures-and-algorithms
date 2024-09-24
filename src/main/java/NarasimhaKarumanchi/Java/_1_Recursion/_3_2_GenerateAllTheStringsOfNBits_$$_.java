@@ -26,7 +26,7 @@ Input: 3
 Output: 0 0 0, 0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1
 
 */
-public class _3_2_GenerateAllTheStringsOfNBits {
+public class _3_2_GenerateAllTheStringsOfNBits_$$_ {
 
 	/**
 	@Approach_1_:

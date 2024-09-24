@@ -316,10 +316,10 @@ public class LinkedListServiceImplementation implements LinkedListService {
 		if (head == null || head.getNext() == null)
 			return head;
 		
-		ListNode current = head, previous = null, next = null;		
+		ListNode current = head, previous = null;		
 		
 		while (current != null) {
-			next = current.getNext(); // Store the next node
+			ListNode next = current.getNext(); // Store the next node
 			current.setNext(previous); // Reverse the link
 			previous = current; // Move previous to current node
 			current = next; // Move current to next node
