@@ -1,7 +1,7 @@
 /**
  * 
  */
-package design_pattern.creational.builder.example_1_Burger;
+package designpattern._1_creational._004_builder.example_01_Burger;
 
 /**
  * @author Tousif
@@ -14,7 +14,7 @@ public class BurgerApp {
 		
 		//Now we do	not need to remember the order of the parameters
 		//Each set method returns the BurgerBuilder object
-		Burger cheeseBurger = new BurgerBuilder()
+		Burger cheeseBurger = new Burger.BurgerBuilder()
 								.setBun("Sesame Seed Bun")
 								.setPatty("Chicken Patty")
 								.setCheese("Cheddar Cheese").build();
