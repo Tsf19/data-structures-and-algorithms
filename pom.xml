@@ -14,7 +14,8 @@
 	<groupId>com.tousif</groupId>
 	<artifactId>data-structures-and-algorithms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<!--<packaging>pom</packaging>-->
+	<packaging>jar</packaging>
 
 	<name>data-structures-and-algorithms</name>
 	<description>learning project</description>
@@ -23,9 +24,12 @@
 
 	<properties>
 		<java.version>21</java.version>
-		<!--		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>21</maven.compiler.source>
+<!--	<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
+-->
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<!--		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.jupiter.version>5.9.1</junit.jupiter.version>
 		<slf4j.version>2.0.13</slf4j.version>
 		<logback.version>1.5.6</logback.version>-->
@@ -91,7 +95,7 @@
 			<scope>test</scope>
 		</dependency>-->
 
-<!--		<dependency>
+		<!--		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
@@ -112,4 +116,14 @@
 	<!--  <modules>
   	<module>java-concepts</module>
   </modules>-->
+  
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+  
 </project>
