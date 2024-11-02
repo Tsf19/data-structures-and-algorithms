@@ -1,40 +1,3 @@
-*/target/
-*/.classpath
-*.classpath
-
-/target/
-**/target
-
-/.classpath
-**/.classpath
-
-*.project
-/.project
-
-/bin/
-
-*.settings/
-/.setting
-**/.setting
-
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -68,6 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/.mvn/
-/mvnw
-/mvnw.cmd
